@@ -138,8 +138,8 @@ def get_all():
         create_worker("cuda-p4-0", max_builds=1),
         create_worker("cuda-t4-0", max_builds=1),
 
-        # HIP on Ubuntu 18.04.5,  Intel(R) Xeon(R) Gold 5218 @ 2.30GHz, Vega20 GPU
-        create_worker("hip-vega20-0", max_builds=1),
+        # HIP on Ubuntu 22.04.3,  Intel(R) Xeon(R) Gold 5218 @ 2.30GHz, gfx908
+        create_worker("hip-vega20-1", max_builds=1),
 
         # X86_64 AVX512, Ubuntu 22.04.1 LTS, Intel(R) Xeon(R) Silver 4216 CPU @ 2.10GHz
         create_worker("avx512-intel64", properties={'jobs': 80}, max_builds=1),
@@ -369,6 +369,8 @@ def get_all():
         create_worker("rocm-docker-ubu-22", properties={'jobs': 32}, max_builds=1),
         create_worker("rocm-docker-rhel-9", properties={'jobs': 32}, max_builds=1),
         create_worker("rocm-docker-rhel-8", properties={'jobs': 32}, max_builds=1),
+        # Containerized HIP buildbot on gfx90a
+        create_worker("hip-vega20-0", max_builds=1),
 
         # AMD ROCm support, Ubuntu 18.04.6, AMD Ryzen @ 1.5 GHz, MI200 GPU
         create_worker("mi200-buildbot", max_builds=1),

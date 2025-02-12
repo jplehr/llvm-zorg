@@ -2660,6 +2660,15 @@ all += [
                     checkout_llvm_sources=False,
                     script_interpreter=None)},
 
+    {'name' : "clang-hip-vega20-gfx908",
+    'tags'  : ["clang"],
+    'workernames' : ["hip-vega20-1"],
+    'builddir': "clang-hip-vega20-gfx908",
+    'factory' : AnnotatedBuilder.getAnnotatedBuildFactory(
+                    script="hip-build.sh",
+                    checkout_llvm_sources=False,
+                    script_interpreter=None)},
+
 # VE builders.
     {'name' : "clang-ve-ninja",
     'tags'  : ["clang"],
